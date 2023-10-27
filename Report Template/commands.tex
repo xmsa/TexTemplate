@@ -1,0 +1,71 @@
+\usepackage{amsmath, amssymb, amsthm} % بسته‌های ریاضی و قضایای امسال
+\usepackage[all]{xy} % برای ترسیم نمودارها
+\usepackage[left=1.3cm, right=1.3cm, top=1cm, bottom=1.3cm, nohead, hmargin=2cm,vmargin=2.5cm]{geometry} % تنظیمات حاشیه‌ها
+\usepackage{graphicx} % برای درج تصاویر
+\usepackage{fancyhdr} % برای تنظیم سربرگ و پاورقی صفحات
+\usepackage{fontspec} % برای انتخاب فونتها
+\usepackage{framed} % برای ایجاد قاب برای متن
+\usepackage{ } % برای شمارش تعداد صفحات
+\usepackage{cite} % برای ارجاع به منابع
+\usepackage{pdfpages} % برای درج صفحات PDF
+\usepackage{ifthen} % برای شرطی کردن تنظیمات
+\usepackage{xcolor, colortbl} % برای استفاده از رنگها
+\usepackage{pifont} % برای استفاده از نمادها
+
+\usepackage{enumitem} % برای سفارشی‌سازی محیط‌های شماره‌گذاری
+\usepackage{stackengine} % برای ترتیب متون و اشیاء
+\usepackage{tabularx} % برای جداول با عرض متغیر
+\usepackage{multirow} % برای ترکیب سلول‌های چند ردیفی در جدول
+\usepackage{fourier} % برای فونتهای تایمز
+\usepackage{array} % برای سفارشی‌سازی جداول
+\usepackage{makecell} % برای سفارشی‌سازی سلول‌ها در جدول
+\usepackage{ptext} % تولید متن تصادفی
+\usepackage{hyperref} % برای ایجاد لینکهای رنگی
+\usepackage[nottoc]{tocbibind} % برای اضافه کردن فهرست مطالب به فهرست مطالب
+\usepackage{bidipoem} % برای شعر فارسی
+\usepackage{tikz} % برای ترسیم نمودارهای تعاملی
+\usepackage{atbegshi} % برای کنترل تصاویر و نمودارها
+\usetikzlibrary{calc} % کتابخانه‌ای برای ترسیم نمودارهای TikZ
+
+
+\usepackage{fancyhdr} % Custom headers and footers
+
+
+% چنانچه قصد پرینت گرفتن نوشته خود را دارید، خط بالا را غیرفعال و  از دستور زیر استفاده کنید چون در صورت استفاده از دستور زیر‌‌، 
+% لینک‌ها به رنگ سیاه ظاهر خواهند شد که برای پرینت گرفتن، مناسب‌تر است
+%\usepackage[pagebackref=false]{hyperref}
+
+
+% بسته‌ لازم برای تنظیم سربرگ‌ها
+% بسته‌ای برای ظاهر شدن «مراجع» و «نمایه» در فهرست مطالب
+
+% دستورات مربوط به ایجاد نمایه
+%\usepackage{makeidx}
+%\makeindex
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% فراخوانی بسته زی‌پرشین و تعریف قلم فارسی و انگلیسی
+\usepackage{xepersian}
+\settextfont[Scale=1]{XB Niloofar}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% چنانچه می‌خواهید اعداد در فرمول‌ها، انگلیسی باشد، خط زیر را غیرفعال کنید
+\setdigitfont[Scale=1.2]{XB Niloofar}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% تعریف و نحوه ظاهر شدن عنوان قضیه‌ها، تعریف‌ها، مثال‌ها و ...
+\theoremstyle{definition}
+\newtheorem{definition}{تعریف}[section]
+\theoremstyle{theorem}
+%\newtheorem{s}[definition]{}
+\newtheorem{theorem}[definition]{قضیه}
+\newtheorem{lemma}[definition]{لم}
+\newtheorem{proposition}[definition]{گزاره}
+\newtheorem{corollary}[definition]{نتیجه}
+\newtheorem{remark}[definition]{تبصره}
+\theoremstyle{definition}
+\newtheorem{example}[definition]{مثال}
+\newtheorem{notation}[definition]{نمادگذاری}
+\newtheorem{definitiont}[definition]{تعریف و نمادگذاری}
+\newtheorem{obs}[definition]{ملاحظه}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
