@@ -1,0 +1,291 @@
+% در این فایل، دستورها و تنظیمات مورد نیاز، آورده شده است.
+%-------------------------------------------------------------------------------------------------------------------
+
+% در ورژن جدید زی‌پرشین برای تایپ متن‌های ریاضی، این سه بسته، حتماً باید فراخوانی شود
+\usepackage{amsthm,amssymb,amsmath}
+\usepackage{tikz} % برای ترسیم نمودارهای تعاملی
+\usepackage[all]{xy}
+% بسته‌ای برای تنطیم حاشیه‌های بالا، پایین، چپ و راست صفحه
+\usepackage[top=40mm, bottom=25mm, left=25mm, right=35mm]{geometry}
+% بسته‌‌ای برای ظاهر شدن شکل‌ها و تصاویر متن
+
+
+\usepackage{siunitx}
+\sisetup{group-separator = {,}}
+
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{listings}
+\usepackage{xcolor}  % برای تنظیم رنگ
+
+\usepackage{fancyhdr}
+\usepackage{fontspec}
+\usepackage{framed} 
+\usepackage{lastpage}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{tabularx} % برای جداول با عرض متغیر
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{caption}   % برای سفارشی‌سازی کپشن‌ها
+\usepackage{ifthen} % برای شرط‌ها
+
+\captionsetup[figure]{font=small}  % کوچک کردن سایز کپشن‌ها برای تصاویر
+% بسته‌ و دستوراتی برای ایجاد لینک‌های رنگی با امکان جهش
+\usepackage[pagebackref=false,colorlinks,linkcolor=blue,citecolor=magenta]{hyperref}
+
+\usepackage[nottoc]{tocbibind}
+\usepackage{bidipoem}
+% بسته‌ای برای رسم کادر
+% بسته‌‌ای برای چاپ شدن خودکار تعداد صفحات در صفحه «معرفی پایان‌نامه»
+
+% چنانچه قصد پرینت گرفتن نوشته خود را دارید، خط بالا را غیرفعال و  از دستور زیر استفاده کنید چون در صورت استفاده از دستور زیر‌‌، 
+% لینک‌ها به رنگ سیاه ظاهر خواهند شد که برای پرینت گرفتن، مناسب‌تر است
+%\usepackage[pagebackref=false]{hyperref}
+% بسته‌ لازم برای تنظیم سربرگ‌ها
+% بسته‌ای برای ظاهر شدن «مراجع» و «نمایه» در فهرست مطالب
+
+% دستورات مربوط به ایجاد نمایه
+\usepackage{makeidx}
+\makeindex
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{ptext} % بسته تولید متن ساختگی
+% فراخوانی بسته زی‌پرشین و تعریف قلم فارسی و انگلیسی
+\usepackage{xepersian}
+\settextfont[Scale=1]{XB Niloofar}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% چنانچه می‌خواهید اعداد در فرمول‌ها، انگلیسی باشد، خط زیر را غیرفعال کنید
+%\setdigitfont[Scale=1.2]{XB Niloofar}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% تعریف قلم‌های فارسی و انگلیسی اضافی برای استفاده در بعضی از قسمت‌های متن
+\defpersianfont\nastaliq[Scale=2]{IranNastaliq}
+
+\defpersianfont\chapternumber[Scale=3]{XB Niloofar}
+\defpersianfont\naz[Scale=0.9]{IRNazanin}
+\defpersianfont\nazz[Scale=1]{IRNazanin}
+\defpersianfont\nazzz[Scale=1.1]{IRNazanin}
+\defpersianfont\nazzzz[Scale=1.4]{IRNazanin}
+\defpersianfont\nazzzzz[Scale=1.7]{IRNazanin}
+\defpersianfont\Titr[Scale=1.4]{IRTitr}
+
+\deflatinfont\Tim[Scale=.9]{Times New Roman}
+\deflatinfont\Timm[Scale=1]{Times New Roman}
+\deflatinfont\Timmm[Scale=1.1]{Times New Roman}
+\deflatinfont\Timmmm[Scale=1.2]{Times New Roman}
+\deflatinfont\Timmmmm[Scale=1.3]{Times New Roman}
+\deflatinfont\Timmmmmm[Scale=1.4]{Times New Roman}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% دستوری برای حذف کلمه «چکیده»
+%\renewcommand{\abstractname}{}
+% دستوری برای حذف کلمه «abstract»
+%\renewcommand{\latinabstract}{}
+% دستوری برای تغییر نام کلمه «اثبات» به «برهان»
+\renewcommand\proofname{\textbf{برهان}}
+% دستوری برای تغییر نام کلمه «کتاب‌نامه» به «مراجع»
+%\renewcommand{\bibname}{مراجع}
+\renewcommand\bibname{Reference}
+
+
+\renewcommand{\indexname}{فهرست نمادها}
+% دستوری برای تعریف واژه‌نامه انگلیسی به فارسی
+\newcommand\persiangloss[2]{#1\dotfill\lr{#2}\\}
+% دستوری برای تعریف واژه‌نامه فارسی به انگلیسی 
+\newcommand\englishgloss[2]{#2\dotfill\lr{#1}\\}
+% تعریف دستور جدید «\پ» برای خلاصه‌نویسی جهت نوشتن عبارت «پروژه/پایان‌نامه/رساله»
+\newcommand{\پ}{پایان‌نامه }
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% تعریف و نحوه ظاهر شدن عنوان قضیه‌ها، تعریف‌ها، مثال‌ها و ...
+\theoremstyle{definition}
+\newtheorem{definition}{تعریف}[section]
+\theoremstyle{theorem}
+%\newtheorem{s}[definition]{}
+\newtheorem{theorem}[definition]{قضیه}
+\newtheorem{lemma}[definition]{لم}
+\newtheorem{proposition}[definition]{گزاره}
+\newtheorem{corollary}[definition]{نتیجه}
+\newtheorem{remark}[definition]{تبصره}
+\theoremstyle{definition}
+\newtheorem{example}[definition]{مثال}
+\newtheorem{notation}[definition]{نمادگذاری}
+\newtheorem{definitiont}[definition]{تعریف و نمادگذاری}
+\newtheorem{obs}[definition]{ملاحظه}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setcounter{secnumdepth}{4}
+
+
+% دستورهایی برای سفارشی کردن سربرگ صفحات
+\csname@twosidetrue\endcsname
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyhead[OR,ER]{\thepage}
+\fancyhead[OL]{\small\rightmark}
+\fancyhead[EL]{\small\leftmark}
+\renewcommand{\chaptermark}[1]{%
+	\markboth{\thechapter.\ #1}{}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\newcommand{\rt}{\rightarrow}
+\newcommand{\lrt}{\longrightarrow}
+\newcommand{\lto}{\longrightarrow}
+\newcommand{\st}{\stackrel}
+
+\newcommand{\X}{\textbf{X}}
+\newcommand{\Y}{\textbf{Y}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\W}{\textbf{W}}
+\newcommand{\PP}{\textbf{P}}
+\newcommand{\II}{\textbf{I}}
+\newcommand{\QQ}{\textbf{Q}}
+\newcommand{\bb}{{\rm b}}
+\newcommand{\CP}{\mathcal{P}}
+\newcommand{\F}{\mathbf{F}}
+\newcommand{\BF}{\mathbf{F}}
+\newcommand{\CQ}{\mathcal{Q}}
+\newcommand{\CD}{\mathcal{D}}
+\newcommand{\CCM}{\mathcal{M}}
+\newcommand{\Lf}{\mathcal{L}f}
+\newcommand{\Sf}{\mathcal{S}f}
+
+\newcommand{\Ga}{\Gamma}
+\newcommand{\La}{\Lambda}
+\newcommand{\om}{\omega}
+\newcommand{\al}{\alpha}
+\newcommand{\la}{\lambda}
+\newcommand{\Tr}{{\rm{Tr}}}
+\newcommand{\Dtr}{{\mathbf{D}\rm{Tr}}}
+\newcommand{\DD}{{\rm{D}}}
+\newcommand{\J}{\rm{J}}
+\newcommand{\tc}{\bigotimes_{\mathcal{C}}}
+
+\newcommand{\cm}{\mathbf{C}(\rm{mod} \Lambda)}
+\newcommand{\cmo}{\mathbf{C}(\rm{mod} \Lambda^{\rm{op}})}
+\newcommand{\cmb}{\mathbf{C}^{\rm{b}}(\rm{mod} \Lambda)}
+\newcommand{\mmod}{{\rm mod}\mbox{-}}
+\newcommand{\Mod}{{\rm Mod}\mbox{-}}
+\newcommand{\prj}{{\rm prj}\mbox{-}}
+\newcommand{\Gprj}{{\rm Gprj}\mbox{-}}
+\newcommand{\Ginj}{{\rm Ginj}\mbox{-}}
+\newcommand{\rad}{{\rm rad}~}
+\newcommand{\inj}{{\rm inj}\mbox{-}}
+\newcommand{\soc}{{\rm soc}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\Rep}{{\rm Rep}}
+\newcommand{\rep}{{\rm rep}}
+\newcommand{\Inj}{{\rm Inj}\mbox{-}}
+\newcommand{\GInj}{{\rm GInj}\mbox{-}}
+\newcommand{\Prj}{{\rm Prj}\mbox{-}}
+\newcommand{\GPrj}{{\rm GPrj}\mbox{-}}
+\newcommand{\Sum}{{\rm Sum}\mbox{-}}
+\newcommand{\summ}{{\rm sum}\mbox{-}}
+\newcommand{\Flat}{{\rm Flat}\mbox{-}}
+\newcommand{\Vecc}{{\rm Vec}}
+\newcommand{\vecc}{{\rm vec}}
+\newcommand{\gr}{{\rm gr}\mbox{-}}
+\newcommand{\add}{{\rm add}\mbox{-}}
+
+
+\newcommand{\End}{{\rm{End}}}
+\newcommand{\lan}{\langle}
+\newcommand{\ran}{\rangle}
+
+\newcommand{\BC}{\mathbb{C} }
+\newcommand{\BD}{\mathbf{D}}
+\newcommand{\BZ}{\mathbf{Z}}
+\newcommand{\D}{\mathbb{D} }
+\newcommand{\K}{\mathbb{K} }
+\newcommand{\CM}{{\rm CM}\mbox{-}}
+\newcommand{\CF}{\mathcal{F}}
+\newcommand{\CI}{\mathcal{I}}
+\newcommand{\CT}{\mathcal{T}}
+\newcommand{\CV}{\mathcal{V}}
+\newcommand{\CS}{\mathcal{S}}
+\newcommand{\CY}{\mathcal{Y}}
+\newcommand{\CX}{\mathcal{X}}
+\newcommand{\BI}{\mathbf{I}}
+
+
+\newcommand{\N}{\mathbb{N} }
+\newcommand{\Q}{\mathbf{Q} }
+%\newcommand{\Z}{\mathbb{Z} }
+
+\newcommand{\CA}{\mathcal{A} }
+\newcommand{\CC}{\mathcal{C} }
+\newcommand{\BX}{\mathbf{X}}
+\newcommand{\BY}{\mathbf{Y}}
+
+\newcommand{\im}{{\rm{Im}}}
+\newcommand{\op}{{\rm{op}}}
+\newcommand{\inc}{{\rm{inc}}}
+\newcommand{\can}{{\rm{can}}}
+\newcommand{\perf}{{\rm perf}}
+\newcommand{\coperf}{{\rm coperf}}
+
+\newcommand{\Coker}{{\rm{Coker}}}
+\newcommand{\Ker}{{\rm{Ker}}}
+
+\newcommand{\Hom}{{\rm{Hom}}}
+\newcommand{\Ext}{{\rm{Ext}}}
+%%%%%%%%%%%%%%%%%%%%%%
+
+% دستورهایی برای سفارشی کردن صفحات اول فصل‌ها
+\makeatletter
+\newcommand\mycustomraggedright{%
+	\if@RTL\raggedleft%
+	\else\raggedright%
+	\fi}
+\def\@part[#1]#2{%
+	\ifnum \c@secnumdepth >-2\relax
+	\refstepcounter{part}%
+	\addcontentsline{toc}{part}{\thepart\hspace{1em}#1}%
+	\else
+	\addcontentsline{toc}{part}{#1}%
+	\fi
+	\markboth{}{}%
+	{\centering
+		\interlinepenalty \@M
+		\ifnum \c@secnumdepth >-2\relax
+		\huge\bfseries \partname\nobreakspace\thepart
+		\par
+		\vskip 20\p@
+		\fi
+		\Huge\bfseries #2\par}%
+	\@endpart}
+\def\@makechapterhead#1{%
+	\vspace*{-30\p@}%
+	{\parindent \z@ \mycustomraggedright %\@mycustomfont
+		\ifnum \c@secnumdepth >\m@ne
+		\if@mainmatter
+		\vskip 100\p@
+		\huge\bfseries \@chapapp\space {{\chapternumber}\thechapter}
+		\par\nobreak
+		\vskip 40\p@
+		\fi
+		\fi
+		\interlinepenalty\@M 
+		\Huge \bfseries #1\par\nobreak
+		\vskip 70\p@
+}}
+\makeatother
+
+\lstdefinestyle{mypython}{
+	language=Python,
+	backgroundcolor=\color{lightgray},   % رنگ پس زمینه
+	basicstyle=\ttfamily\footnotesize,    % فونت و اندازه
+	breaklines=true,                      % خط‌شکنی خودکار
+	frame=single,                         % قاب دور کد
+	captionpos=b,                         % موقعیت عنوان کد (زیر)
+	numbers=left,                         % شماره‌گذاری خطوط
+	numberstyle=\tiny\color{gray},        % رنگ و اندازه شماره خطوط
+	keywordstyle=\color{blue},            % رنگ کلمات کلیدی
+	commentstyle=\color{green},           % رنگ نظرات
+	stringstyle=\color{red}               % رنگ رشته‌ها
+}

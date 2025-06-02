@@ -1,0 +1,40 @@
+\documentclass[msc]{VThesis}
+%        اگر قصد نوشتن پروژه کارشناسی را دارید، در خط زیر به جای msc، کلمه bsc و اگر قصد نوشتن رساله دکتری
+%        را دارید، کلمه phd را قرار دهید. کلیه تنظیمات لازم، به طور خودکار، اعمال می‌شود.
+%       فایل commands.tex را حتماً به دقت مطالعه کنید؛ چون دستورات مربوط به فراخوانی بسته زی‌پرشین 
+%       و دیگر بسته‌ها و ... در این فایل قرار دارد و بهتر است که با نحوه استفاده از آنها آشنا شوید.
+\input{BaseFile/commands.tex}
+
+\begin{document}
+\baselineskip=1cm
+\pagenumbering{harfi}
+\input{BaseFile/fa_title}
+\input{BaseFile/fa-abstract}
+\tableofcontents
+\include{Content/Introduction.tex}
+\listoffigures
+\newpage
+\pagenumbering{arabic}
+\chapter{مقدمه}
+\input{Content/Chapter1/main.tex}
+\chapter{مرور ادبیات و پیشینه تحقیق}
+\input{Content/Chapter2/main.tex}
+\chapter{مدل‌ها، چالش‌ها و ارزیابی}
+\input{Content/Chapter3/main.tex}
+\chapter{نتایج و بحث}
+\input{Content/Chapter4/main.tex}
+\chapter{نتیجه‌گیری و پیشنهادات}
+\input{Content/Chapter5/main.tex}
+% پیوست ها 
+\input{Content/appendix/main.tex}
+\include{Refrence/references.tex}
+\baselineskip=1cm
+\include{BaseFile/dicfa2en.tex}
+\include{BaseFile/dicen2fa.tex}
+\printindex
+\include{BaseFile/list-name.tex}
+\include{BaseFile/en-abstract.tex}
+\input{BaseFile/en_title.tex}
+\label{LastPage}
+\end{document}
+
